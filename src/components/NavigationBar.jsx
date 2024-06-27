@@ -4,7 +4,7 @@ function NavigationBar() {
     return (
         <nav className='nav-bar'>
             <div className='logo'>
-                <h1>Rups</h1>
+                <h1>LiaBil</h1>
             </div>
             <li>Home</li>
             <li>Account</li>
