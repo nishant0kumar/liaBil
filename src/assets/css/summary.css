@@ -1,0 +1,73 @@
+.summary {
+    position: fixed;
+    right: 0;
+    padding: 7% 2%;
+    height: 100%;
+    width: 56%;
+    overflow-y: scroll;
+}
+
+.summary-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.summary-details::-webkit-scrollbar {
+    display: none;
+}
+
+.round-visualise {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    border: 5px solid red;
+}
+
+.summary-ei {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background-color: black;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 16px;
+}
+
+.month-expense {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-wrap: nowrap;
+}
+
+.expense-month {
+    display: flex;
+    gap: 10px
+}
+
+.month-header {
+    font-size: 12px;
+    color: rgb(120, 120, 120);
+}
+
+.button-expense button {
+    background-color: white;
+    padding: 1.6rem 1rem;
+    color: black;
+    font-size: 18px;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+@media  screen and (max-width: 700px) {
+    .summary {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: max-content;
+    }
+}

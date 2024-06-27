@@ -1,0 +1,100 @@
+.balance-div {
+    padding: 0px 20px;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+    position: fixed;
+    left: 6rem;
+    width: 35%;
+    height: 95%;
+    margin: 2% 10px;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 12px;
+    overflow-y: scroll;
+}
+
+.balance-div::-webkit-scrollbar {
+    display: none;
+}
+
+.page-name {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.balance-report-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(154, 230, 255);
+    gap:4rem;
+    padding: 12px 8px;
+    border-radius: 14px;
+}
+
+.balance-report {
+    background-color: rgb(27, 27, 27);
+    color: white;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    justify-content: space-evenly;
+    border-radius: 12px;
+    box-shadow: 1px 1px 20px 5px rgb(147, 205, 255);
+}
+
+.balance-money {
+    font-size: 30px;
+}
+
+.user-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.style-type {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.type {
+    background-color: rgb(255, 153, 0);
+    height: 40px;
+    width: 40px;
+    margin-right: 30px ;
+    border-radius: 50%;
+}
+
+.type1 {
+    background-color: red;
+    position: relative;
+    left: 39%;
+}
+
+.slider-panel input{
+    width: 100%;
+}
+
+.limit-div {
+    padding: 10px 10px;
+}
+
+.slider::-webkit-slider-thumb{
+    cursor: pointer;
+}
+
+@media  screen and (max-width: 700px) {
+    .balance-div {
+        position: relative;
+        left: 0;
+        width: 95%;
+        gap: 1.5rem;
+        height: 100%;
+        margin: 20px 10px;
+        height: 100%;
+    }
+}

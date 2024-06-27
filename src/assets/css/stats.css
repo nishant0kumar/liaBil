@@ -1,0 +1,21 @@
+.statistics-div {
+    background-color: rgb(140, 255, 138);
+    padding: 10px 5px;
+    border-radius: 8px;
+    margin-bottom: 5rem;
+}
+
+.stats-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem; 
+}
+
+#weeks {
+    padding: 5px 5px;
+    border-radius: 6px;
+}
+
+.stats-graph {
+    height: 15rem;
+}
