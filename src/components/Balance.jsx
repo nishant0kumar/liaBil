@@ -8,7 +8,7 @@ function Balance() {
     let totalBalance = 0;
     monthlyMoney.forEach(balance => {
         if (balance.month === currentMonth) {
-            totalBalance = balance.mAmount
+            totalBalance += balance.mAmount
         }
     })
     let remainingBalance = 0;

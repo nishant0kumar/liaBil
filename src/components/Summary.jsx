@@ -15,7 +15,7 @@ function Summary() {
 
     monthlyMoney.forEach(balance => {
         if (balance.month === currentMonth) {
-            totalBalance = balance.mAmount
+            totalBalance += balance.mAmount
         }
     })
 
@@ -24,7 +24,7 @@ function Summary() {
             previousBalance = balance.mAmount
         }
     })
-    let perRem = (expense/totalBalance)*100
+    let perRem = ((expense/totalBalance)*100).toFixed(1);
     return(
         <div className='summary'>
             <p className='page-name' style={{marginBottom:20}}>Summary</p>
