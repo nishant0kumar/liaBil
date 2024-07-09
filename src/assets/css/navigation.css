@@ -9,21 +9,26 @@
     left: 0%;
     background-color: rgb(255, 86, 86);
     color: white;
-    height: 95%;
-    margin: 2% 10px;
-    box-shadow: 1px 1px 10px 0px rgb(141, 141, 141);
+    height: 90%;
+    margin: 2% 1px;
+    box-shadow: 1px 1px 5px 0px rgb(141, 141, 141);
     border: 1px solid whitesmoke;
     border-radius: 12px;
 }
 
-.logo h1{
-    background-color: transparent;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-transform: uppercase;
+.logo img{
     cursor: default;
 }
 
+.logo-liabil {
+    height: 50px;
+}
+
 .nav-bar li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     list-style: none;
     background-color: transparent;
     cursor: pointer;
@@ -32,14 +37,14 @@
 
 @media  screen and (max-width: 900px) {
     .nav-bar {
-        position: relative;
+        position: static;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         margin: 0px;
         height: auto;
-        padding: 15px 0px;
+        padding: 10px 0px;
         width: 100%;
-        gap: 25px;
+        gap: 5%;
     }
 }

@@ -45,7 +45,7 @@ function TransactionModal({ isVisible, onClose, onSubmit }) {
                         </div>
                         <div className='input-block'>
                             <label>Date:</label>
-                            <input type="" name="date" className='input' value={currentDate} defaultValue={currentDate} />
+                            <input type="" name="date" className='input' defaultValue={currentDate} />
                         </div>
                         <button type="submit" className='submit-button'>Add Transaction</button>
                     </form>

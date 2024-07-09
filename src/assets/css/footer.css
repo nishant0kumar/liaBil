@@ -7,9 +7,13 @@
 .bottom-menu {
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 50%;
+    right: 25%;
+    bottom: 0%;
     backdrop-filter: blur(5px);
-    box-shadow: 10px 10px 10px 10px rgb(100, 100, 100);
+    box-shadow: 1px 1px 10px 0px rgb(13, 13, 13);
+    border-radius: 16px;
+    border: 3px dashed white;
 }
 
 .footer {
@@ -17,8 +21,7 @@
     justify-content: space-around;
     align-items: center;
     background-color: #f8f9fa;
-    border-top: 1px solid #dee2e6;
-    width: 100%;
+    border-radius: 16px;
 }
 
 .add-trans {
@@ -26,12 +29,15 @@
     justify-content: center;
     align-items: center;
     background-color: rgb(117, 193, 255);
-    width: 50%;
     padding: 10px 0px;
+    width: 50%;
+    border-radius: 16px 0px 0px 16px;
 }
 
 .add-plus {
     background-color: rgb(0, 255, 0);
+    border-radius: 0px 16px 16px 0px;
+
 }
 
 .trans {
