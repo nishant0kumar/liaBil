@@ -26,8 +26,10 @@ function Summary() {
     })
     let perRem = 0;
     let perInc = 0;
-    perInc = (((totalBalance-expense)/totalBalance)/100).toFixed(1);
-    perRem = ((expense/totalBalance)*100).toFixed(1);
+    if (totalBalance != 0) {
+        perInc = (((totalBalance-expense)/totalBalance)/100).toFixed(1);
+        perRem = ((expense/totalBalance)*100).toFixed(1);
+    }
     return(
         <div className='summary'>
             <p className='page-name' style={{marginBottom:20}}>Summary</p>
