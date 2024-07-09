@@ -27,7 +27,7 @@ function Summary() {
     let perRem = 0;
     let perInc = 0;
     if (totalBalance != 0) {
-        perInc = (((totalBalance-expense)/totalBalance)/100).toFixed(1);
+        perInc = (((totalBalance-expense)/totalBalance)*100).toFixed(1);
         perRem = ((expense/totalBalance)*100).toFixed(1);
     }
     return(
