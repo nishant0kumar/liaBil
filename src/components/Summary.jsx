@@ -1,7 +1,7 @@
 import '../assets/css/summary.css';
 import History from './TransactionHistory';
 
-import {transactionDetails, monthlyMoney} from '../assets/data/transaction.js'
+import {transactionDetails, monthlyMoney, currentMonth, previousMonth} from '../assets/data/transaction.js'
 function Summary() {
     let expense = 0;
 
@@ -9,8 +9,22 @@ function Summary() {
 
         expense += element.amount;
     });
-    let total = 10000;
-    let perRem = (expense/total)*100
+
+    let totalBalance = 0;
+    let previousBalance = 0;
+
+    monthlyMoney.forEach(balance => {
+        if (balance.month === currentMonth) {
+            totalBalance = balance.mAmount
+        }
+    })
+
+    monthlyMoney.forEach(balance => {
+        if (balance.month === previousMonth) {
+            previousBalance = balance.mAmount
+        }
+    })
+    let perRem = (expense/totalBalance)*100
     return(
         <div className='summary'>
             <p className='page-name' style={{marginBottom:20}}>Summary</p>
@@ -24,11 +38,11 @@ function Summary() {
                         <div className="expense-month">
                             <div className="last-month">
                                 <p className='month-header'>Last month</p>
-                                <p>${expense}</p>
+                                <p>${0}</p>
                             </div>
                             <div className="this-month">
                                 <p className='month-header'>This month</p>
-                                <p>$500</p>
+                                <p>${expense}</p>
                             </div>
                         </div>
                     </div>
@@ -38,18 +52,18 @@ function Summary() {
                 </div>
                 <div className="income-summary summary-ei">
                     <div className='round-visualise'>
-                        <h2>45%</h2>
+                        <h2>{100 - perRem}%</h2>
                     </div>
                     <div className="month-expense">
                         <p>Total Income</p>
                         <div className="expense-month">
                             <div className="last-month">
                                 <p className='month-header'>Last month</p>
-                                <p>$400</p>
+                                <p>${previousBalance}</p>
                             </div>
                             <div className="this-month">
                                 <p className='month-header'>This month</p>
-                                <p>$500</p>
+                                <p>${totalBalance}</p>
                             </div>
                         </div>
                     </div>

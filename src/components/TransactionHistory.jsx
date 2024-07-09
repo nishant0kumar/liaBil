@@ -23,18 +23,18 @@ function History(){
                 ):
                 (transactionDetails.slice(-10).map((trans, index) => (
                     <div className="categories" key={index}>
-                    <div className='history-details'>
-                        <div className="cat-logo">{"24"}</div>
-                    <div className='cat-name'>
-                        <p>{trans.catego}</p>
-                        <p className='light'>{trans.description}</p>
+                        <div className='history-details'>
+                            <div className="cat-logo">{"24"}</div>
+                            <div className='cat-name'>
+                                <p>{trans.catego}</p>
+                                <p className='light'>{trans.description}</p>
+                            </div>
+                        </div>
+                        <div className="amount-cat">
+                            <p>{trans.amount}</p>
+                            <p className='light'>{trans.date}</p>
+                        </div>
                     </div>
-                    </div>
-                    <div className="amount-cat">
-                        <p>{trans.amount}</p>
-                        <p className='light'>{trans.date}</p>
-                    </div>
-                </div>
                 )))}
             </div>
         </div>

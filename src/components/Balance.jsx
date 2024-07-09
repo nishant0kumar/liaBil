@@ -2,8 +2,7 @@ import '../assets/css/balance.css';
 import '../assets/css/common.css';
 import Stats from './Stats';
 
-import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
-import { monthlyMoney, transaction, transactionDetails, currentDate, currentMonth } from '../assets/data/transaction';
+import { monthlyMoney, transactionDetails, currentDate, currentMonth } from '../assets/data/transaction';
 
 function Balance() {
     let totalBalance = 0;
@@ -38,7 +37,9 @@ function Balance() {
                     <div className='limit-div'>
                         <p>Monthly Expense limit</p>
                         <div className="slider-panel">
-                            <input type="range" title={'$',totalExpenditure} value={totalExpenditure} max={totalBalance} onChange = {() =>{value}} className="slider" />
+                            ${totalExpenditure}
+                            <input type="range" title={totalExpenditure} value={totalExpenditure} max={totalBalance} onChange = {() =>{value}} className="slider" />
+                            ${remainingBalance}
                         </div>
                     </div>
                 </div>
