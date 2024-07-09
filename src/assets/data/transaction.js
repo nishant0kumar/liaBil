@@ -2,66 +2,34 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
 const today = dayjs();
 export let currentDate = today.add(0, 'days');
-export let currentMonth = today.add(0)
-currentDate = currentDate.format('DD MMMM YYYY')
-currentMonth = currentMonth.format('MMMM')
+export let currentMonth = today.add(0);
+export let previousMonth = today.add(-1, 'months')
+currentDate = currentDate.format('DD MMMM YYYY');
+currentMonth = currentMonth.format('MMMM');
+previousMonth = previousMonth.format('MMMM');
+
+console.log(previousMonth);
 
 
-export let transaction = [{
-    amount: 100,
-    date: '22 may 2024',
-    catego: 'entertainment',
-    name:'shopping'
-},
-{
-    amount: 1500,
-    date: '2 may 2024',
-    catego: 'entertainment',
-    name:'shopping'
-},
-{
-    amount: 400,
-    date: '22 may 2024',
-    catego: 'entertainment',
-    name:'shopping'
-},
-{
-    amount: 2000,
-    date: '22 may 2024',
-    catego: 'entertainment',
-    name:'shopping'
-},
-{
-    amount: 1500,
-    date: '22 may 2024',
-    catego: 'entertainment',
-    name:'shopping'
-},
-{
-    amount: 200,
-    date: '22 may 2024',
-    catego: 'entertainment',
-    name:'shopping'
-},
-{
-    amount: 1000,
-    date: '22 may 2024',
-    catego: 'entertainment',
-    name:'shopping'
+export let monthlyMoney = JSON.parse(localStorage.getItem('monthlyMoney')); 
+if (!monthlyMoney){
+    monthlyMoney = [{
+    mAmount: 0,
+    month: 'July',
+    date: ''
 }]
-
-export let monthlyMoney = [{
-    mAmount: 10000,
-    month: 'June'
-}]
+}
 
 export let transactionDetails = JSON.parse(localStorage.getItem('transactionDetails'));
 if (!transactionDetails) {
     transactionDetails = []
 } 
 
+/* console.log(transactionDetails); */
+
 export function updateTransactionDetails() {
     localStorage.setItem('transactionDetails', JSON.stringify(transactionDetails));
+    localStorage.setItem('monthlyMoney', JSON.stringify(monthlyMoney));
 }
 
 let expen = [{
@@ -69,3 +37,5 @@ let expen = [{
             amount: 655
         }
 }]
+
+/* console.log(expen); */
