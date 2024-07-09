@@ -24,7 +24,10 @@ function Summary() {
             previousBalance = balance.mAmount
         }
     })
-    let perRem = ((expense/totalBalance)*100).toFixed(1);
+    let perRem = 0;
+    let perInc = 0;
+    perInc = (((totalBalance-expense)/totalBalance)/100).toFixed(1);
+    perRem = ((expense/totalBalance)*100).toFixed(1);
     return(
         <div className='summary'>
             <p className='page-name' style={{marginBottom:20}}>Summary</p>
@@ -52,7 +55,7 @@ function Summary() {
                 </div>
                 <div className="income-summary summary-ei">
                     <div className='round-visualise'>
-                        <h2>{100 - perRem}%</h2>
+                        <h2>{perInc}%</h2>
                     </div>
                     <div className="month-expense">
                         <p>Total Income</p>
