@@ -9,6 +9,8 @@
 
 .summary-details {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
 }
@@ -46,7 +48,7 @@
 
 .expense-month {
     display: flex;
-    gap: 10px
+    gap: 10px;
 }
 
 .month-header {
@@ -63,11 +65,10 @@
     border-radius: 10px;
 }
 
-@media  screen and (max-width: 700px) {
+@media  screen and (max-width: 900px) {
     .summary {
-        position: absolute;
-        left: 0;
+        position: static;
         width: 100%;
-        height: max-content;
+        height: auto;
     }
 }
