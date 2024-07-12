@@ -10,22 +10,32 @@ previousMonth = previousMonth.format('MMMM');
 
 console.log(previousMonth);
 
-
 export let monthlyMoney = JSON.parse(localStorage.getItem('monthlyMoney')); 
 if (!monthlyMoney){
     monthlyMoney = [{
-    mAmount: 0,
-    month: 'July',
-    date: ''
-}]
+        mAmount: 0,
+        month: 'July',
+        date: ''
+    }];
 }
 
 export let transactionDetails = JSON.parse(localStorage.getItem('transactionDetails'));
 if (!transactionDetails) {
-    transactionDetails = []
+    transactionDetails = [];
 } 
 
-/* console.log(transactionDetails); */
+function sortTransactiondetails(transactionDetails) {
+    // Function to parse the date string into a Date object
+    const parseDateString = (dateString) => {
+        const [day, month, year] = dateString.split(" ");
+        return new Date(`${month} ${day}, ${year}`);
+    };
+
+    // Sort the array by the date property
+    transactionDetails.sort((a, b) => parseDateString(a.date) - parseDateString(b.date));
+}
+
+sortTransactiondetails(transactionDetails);
 
 export function updateTransactionDetails() {
     localStorage.setItem('transactionDetails', JSON.stringify(transactionDetails));
@@ -34,8 +44,9 @@ export function updateTransactionDetails() {
 
 let expen = [{
     currentMonth:{
-            amount: 655
-        }
-}]
+        amount: 655
+    }
+}];
 
-/* console.log(expen); */
+
+console.log(transactionDetails);

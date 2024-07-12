@@ -29,22 +29,11 @@ function TransactionCredit({ isVisible, onClose, onSubmit }) {
                         </div>
                         <div className='input-block'>
                             <label>Month:</label>
-                            <input type="" name="month" className='input' value={currentMonth} required />
+                            <input type="" name="month" className='input' defaultValue={currentMonth} required />
                         </div>
-                        {/* <div>
-                            <label htmlFor="weeks">Category: 
-                            <select name="catego" id="weeks">
-                                <option value="entertainment" name="catego">Entertainment</option>
-                                <option value="travel" name="catego">Travel</option>
-                                <option value="study" name="catego">Study</option>
-                                <option value="daily" name="catego" default>Daily</option>
-                                <option value="other" name="catego">Other</option>
-                            </select>
-                        </label>
-                        </div> */}
                         <div className='input-block'>
                             <label>Date:</label>
-                            <input type="" name="date" className='input' value={currentDate} />
+                            <input type="" name="date" className='input' defaultValue={currentDate} />
                         </div>
                         <button type="submit" className='submit-button'>Add Transaction</button>
                     </form>

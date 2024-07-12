@@ -1,25 +1,29 @@
 import '../assets/css/stats.css'
 import React from 'react'
 import { Line } from 'react-chartjs-2'
-import {transactionDetails} from '../assets/data/transaction'
+import {currentMonth, transactionDetails} from '../assets/data/transaction'
 import { Chart, registerables } from 'chart.js'
 Chart.register(...registerables)
 
 let data = [];
 let label =  [];
-
 transactionDetails.forEach(element => {
-  let amount = element.amount;
-  let date = element.date;
-  label.push(date)
-  data.push(amount)
+  let month = element.date.split(" ")[1];
+  let amount = 0
+  let date = '';
+  if (month === currentMonth) {
+    amount = element.amount;
+    date = element.date;
+    label.push(date)
+    data.push(amount)
+  }
 });
 
 const state = {
   labels: label,
   datasets: [
     {
-      label: '',
+      label: 'Recent',
       backgroundColor: [
         'White',
         'White',
@@ -27,11 +31,11 @@ const state = {
         'White',
         'White',
         'White',
-        'White',
+        'Red',
       ],
       fill: false,
       lineTension: 0.5,
-      borderColor: 'rgba(5,5,5,1)',
+      borderColor: 'rgba(5,5,5,0.7)',
       borderWidth: 1,
       data: data,
     },

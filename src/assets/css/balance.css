@@ -28,6 +28,7 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: rgb(154, 230, 255);
+    background: linear-gradient( #77E4C8, #36C2CE, #478CCF, #4535C1);
     gap:4rem;
     padding: 12px 8px;
     border-radius: 14px;
@@ -46,7 +47,8 @@
 }
 
 .balance-money {
-    font-size: 30px;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .user-details {
@@ -78,6 +80,8 @@
 .slider-panel {
     display: flex;
     flex-direction: row;
+    color: white;
+    gap: 0.5rem;
 }
 
 .slider-panel input{
@@ -85,6 +89,9 @@
 }
 
 .limit-div {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
     padding: 10px 10px;
 }
 

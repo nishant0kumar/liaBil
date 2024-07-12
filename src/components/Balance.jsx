@@ -15,7 +15,10 @@ function Balance() {
     let totalExpenditure = 0;
 
     transactionDetails.forEach(amount => {
-        totalExpenditure +=amount.amount
+        let month = amount.date.split(" ")[1];
+        if (month === currentMonth) {
+            totalExpenditure +=amount.amount
+        }
     })
     remainingBalance = totalBalance - totalExpenditure;
     return (
@@ -38,7 +41,7 @@ function Balance() {
                         <p>Monthly Expense limit</p>
                         <div className="slider-panel">
                             ${totalExpenditure}
-                            <input type="range" title={totalExpenditure} value={totalExpenditure} max={totalBalance} onChange = {() =>{value}} className="slider" />
+                            <input type="range" title={totalExpenditure} value={totalExpenditure} max={totalBalance} className="slider" />
                             ${remainingBalance}
                         </div>
                     </div>
