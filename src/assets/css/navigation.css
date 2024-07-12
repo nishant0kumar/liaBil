@@ -18,6 +18,7 @@
 
 .logo img{
     cursor: default;
+    transform: rotate(-20deg);
 }
 
 .logo-liabil {
@@ -32,7 +33,11 @@
     list-style: none;
     background-color: transparent;
     cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
 
+.nav-bar li:hover {
+    transform: rotate(-12deg);
 }
 
 @media  screen and (max-width: 900px) {
@@ -40,11 +45,10 @@
         position: static;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         margin: 0px;
         height: auto;
-        padding: 10px 0px;
+        padding: 10px 10px;
         width: 100%;
-        gap: 5%;
     }
 }
