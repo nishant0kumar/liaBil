@@ -10,7 +10,7 @@ function NavigationBar() {
                 <div className='logo'>
                     <img src={logo} alt="logo" className='logo-liabil'/>
                 </div>
-                <ul className='nav-bar'>
+                <ul className='nav-link'>
                     <li>
                         <i className='fa-solid fa-house'></i>
                         <p>Home</p>

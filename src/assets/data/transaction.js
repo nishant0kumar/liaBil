@@ -8,8 +8,6 @@ currentDate = currentDate.format('DD MMMM YYYY');
 currentMonth = currentMonth.format('MMMM');
 previousMonth = previousMonth.format('MMMM');
 
-console.log(previousMonth);
-
 export let monthlyMoney = JSON.parse(localStorage.getItem('monthlyMoney')); 
 if (!monthlyMoney){
     monthlyMoney = [{
@@ -41,12 +39,3 @@ export function updateTransactionDetails() {
     localStorage.setItem('transactionDetails', JSON.stringify(transactionDetails));
     localStorage.setItem('monthlyMoney', JSON.stringify(monthlyMoney));
 }
-
-let expen = [{
-    currentMonth:{
-        amount: 655
-    }
-}];
-
-
-console.log(transactionDetails);
