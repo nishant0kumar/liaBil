@@ -39,7 +39,8 @@ function TransactionModal({ isVisible, onClose, onSubmit }) {
                                 <option value="travel" name="catego">Travel</option>
                                 <option value="study" name="catego">Study</option>
                                 <option value="daily" name="catego" default>Daily</option>
-                                <option value="other" name="catego">Other</option>
+                                <option value="food" name="catego" default>Food</option>
+                                <option value="others" name="catego">Others</option>
                             </select>
                         </label>
                         </div>
