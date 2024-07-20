@@ -27,15 +27,16 @@ function Balance() {
                 <p className='page-name'>Balance</p>
                 <div className="balance-report-div">
                     <div className='balance-report'>
-                        <p className='balance-money'>${totalBalance}</p>
-                        <p className='today-date'>{currentDate}</p>
                         <div className='user-details'>
+                            <p className='balance-money'>${totalBalance}</p>
+                            <p className='today-date'>{currentDate}</p>
                             <p className='user-name'>Nishant</p>
-                            <div className='style-type'>
-                                <div className='type type1'></div>
-                                <div className='type'></div>
-                            </div>
                         </div>
+                        <div className='style-type'>
+                                {/* <div className='type type1'></div>
+                                <div className='type'></div> */}
+                                <i className='fa-solid fa-money-bill-trend-up'></i>
+                            </div>
                     </div>
                     <div className='limit-div'>
                         <p>Monthly Expense limit</p>

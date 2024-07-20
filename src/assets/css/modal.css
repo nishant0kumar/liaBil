@@ -13,11 +13,18 @@
 
 .modal-content {
     padding: 15px;
-    border: 5px dashed rgb(181, 181, 181);
     border-radius: 8px;
     position: relative;
     width: 400px;
     max-width: 100%;
+}
+
+.dark-mode label {
+    color: white;
+}
+
+.dark-mode input {
+    color: rgb(227, 227, 227);
 }
 
 .close-button {

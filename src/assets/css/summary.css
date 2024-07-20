@@ -7,6 +7,10 @@
     overflow-y: scroll;
 }
 
+.summary::-webkit-scrollbar{
+    display: none;
+}
+
 .summary-details {
     display: flex;
     justify-content: center;
@@ -33,10 +37,14 @@
     display: flex;
     align-items: center;
     gap: 3rem;
-    background-color: black;
-    color: white;
     padding: 10px 10px;
     border-radius: 16px;
+    border: 1px solid rgb(187, 187, 187);
+}
+
+.dark-mode .summary-ei {
+    background-color: black;
+    border: 1px solid #202020;
 }
 
 .month-expense {
@@ -57,12 +65,18 @@
 }
 
 .button-expense button {
-    background-color: white;
+    background-color: transparent;
     padding: 1.6rem 1rem;
-    color: black;
     font-size: 18px;
     font-weight: bolder;
+    font-family: monospace;
     border-radius: 10px;
+    border: 1px solid grey;
+}
+
+.dark-mode .button-expense button{
+    color: white;
+    border: 1px solid #252525;
 }
 
 @media  screen and (max-width: 900px) {

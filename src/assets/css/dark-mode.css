@@ -1,20 +1,44 @@
+
+body.dark-mode {
+    background-color: #090909;
+    color: #ffffff;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 .dark-but {
-    height: 55px;
-    width: 55px;
-    background-color: rgb(255, 110, 110);
-    outline: none;
-    color: white;
-    border: none;
+    background: rgb(255, 255, 255);
+    height: 45px;
+    width: 45px;
     border-radius: 50%;
-    transition: all 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
 }
 
-.dark-but i {
-    font-size: 22px;
+.dark-mode .dark-but {
+    background-color: black;
 }
 
-.dark-but:hover {
+.dark-but .fa-sun {
+    color: yellow;
+    transition:all 1s ease-in-out;
+    font-size: 24px;
+}
+
+.dark-but .fa-moon {
     color: black;
-    background-color: white;
-    transform: rotate(90deg);
+    font-size: 24px;
+    transition: all 1s ease-in-out;
+
+}
+
+.fa-sun {
+    transform: rotate(180deg);
+}
+.fa-moon:active {
+    transform: rotate(180deg);
 }

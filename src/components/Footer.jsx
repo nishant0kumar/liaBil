@@ -51,10 +51,10 @@ function Footer({ onAddTransaction }) {
                 />
                 <div className="footer">
                     <div className="add-trans" onClick={handleAddCreditTransaction}>
-                        <p title="Add Credit Transaction" className='trans'>Credit</p>
+                        <p title="Add Credit Transaction" className='trans credit'>money-In</p>
                     </div>
                     <div title="Add Debit Transaction" className="add-trans add-plus" onClick={handleAddDebitTransaction}>
-                        <p title="Add Debit Transaction" className='trans'>Debit</p>
+                        <p title="Add Debit Transaction" className='trans debit'>money-Out</p>
                     </div>
                 </div>
             </div>

@@ -19,23 +19,30 @@ if (!monthlyMoney){
 
 export let transactionDetails = JSON.parse(localStorage.getItem('transactionDetails'));
 if (!transactionDetails) {
-    transactionDetails = [];
-} 
+    transactionDetails = [
+        /* {
+            amount: 500,
+            description: "description",
+            catego: "entertainment",
+            date: "20 July 2024",
+        } */
+    ];
+}
+
+console.log(transactionDetails);
 
 function sortTransactiondetails(transactionDetails) {
-    // Function to parse the date string into a Date object
     const parseDateString = (dateString) => {
         const [day, month, year] = dateString.split(" ");
         return new Date(`${month} ${day}, ${year}`);
     };
 
-    // Sort the array by the date property
     transactionDetails.sort((a, b) => parseDateString(a.date) - parseDateString(b.date));
 }
 
-sortTransactiondetails(transactionDetails);
 
 export function updateTransactionDetails() {
     localStorage.setItem('transactionDetails', JSON.stringify(transactionDetails));
     localStorage.setItem('monthlyMoney', JSON.stringify(monthlyMoney));
+    sortTransactiondetails(transactionDetails);
 }

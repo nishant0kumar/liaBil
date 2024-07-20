@@ -20,7 +20,9 @@
 
 .page-name {
     margin-top: 10px;
-    font-size: 25px;
+    font-size: 35px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-variant: small-caps;
 }
 
 .balance-report-div {
@@ -32,18 +34,31 @@
     gap:4rem;
     padding: 12px 8px;
     border-radius: 14px;
+    border: 1px solid white;
+}
+
+.dark-mode .balance-div {
+    border: 1px solid #272727;
+}
+
+.dark-mode .balance-report-div {
+    background: black;
+    border: 1px solid #383838;
+}
+
+.dark-mode .balance-report{
+    background-color: #090909;
+    box-shadow: none;
 }
 
 .balance-report {
-    background-color: rgb(27, 27, 27);
-    color: white;
-    height: 12rem;
+    background-color: white;
+    height: 15rem;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     padding-left: 20px;
-    justify-content: space-evenly;
     border-radius: 12px;
-    box-shadow: 1px 1px 20px 5px rgb(147, 205, 255);
 }
 
 .balance-money {
@@ -52,15 +67,29 @@
 }
 
 .user-details {
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: light;
+    justify-content: space-evenly;
 }
 
 .style-type {
+    height: 70%;
     display: flex;
-    justify-content: space-around;
-    margin: 0;
+    align-items: end;
+    margin-right: 5rem;
     padding: 0;
+}
+
+.style-type i {
+    font-size: 50px;
+    color: rgb(0, 255, 4);
+}
+
+.dark-mode .style-type i {
+    color: whitesmoke;
 }
 
 .type {
